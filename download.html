@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargement en cours...</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #007bff;
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="container mt-5">
+        <h1>telechargement va commencer bientot ...</h1>
+        <p id="countdown">Préparation du fichier...</p>
+    </header>
+
+    <!-- JavaScript du compte à rebours -->
+    <script>
+        let countdown = 10;
+        let countdownElement = document.getElementById("countdown");
+
+        let interval = setInterval(() => {
+            countdown--;
+            countdownElement.innerText = "veuillez patienter dans " + countdown + " secondes...";
+
+            if (countdown === 0) {
+                clearInterval(interval);
+                window.location.href = "download2.html"; // Redirige vers le fichier APK
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
