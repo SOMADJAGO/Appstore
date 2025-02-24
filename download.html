@@ -20,12 +20,54 @@
             margin-bottom: 20px;
             color: red;
         }
+        /* Styles pour la bannière publicitaire */
+        .publicite-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .publicite {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+            border: 3px solid #ff8800;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            animation: clignotement 1.5s infinite alternate;
+        }
+        .publicite p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .btn-publicite {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .btn-publicite:hover {
+            transform: scale(1.1);
+            background-color: #1ebd57;
+        }
+        @keyframes clignotement {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
     </style>
 </head>
 <body>
 
     <header class="container mt-5">
-        <h1>telechargement va commencer bientot ...</h1>
+        <h1>Le téléchargement va commencer bientôt...</h1>
         <p id="countdown">Préparation du fichier...</p>
     </header>
 
@@ -36,7 +78,7 @@
 
         let interval = setInterval(() => {
             countdown--;
-            countdownElement.innerText = "veuillez patienter dans " + countdown + " secondes...";
+            countdownElement.innerText = "Veuillez patienter " + countdown + " secondes...";
 
             if (countdown === 0) {
                 clearInterval(interval);
@@ -44,6 +86,16 @@
             }
         }, 1000);
     </script>
+
+    <!-- Bannière publicitaire en bas de page -->
+    <div class="publicite-container">
+        <div class="publicite">
+            <p>📢 **Restez informé en avant-première !** 🔔<br>  
+            Rejoignez notre **forum WhatsApp officiel** pour ne manquer **aucune mise à jour** du site.<br>  
+            ✅ **Soyez les premiers à découvrir nos nouveautés et améliorations !**</p>
+            <a href="https://chat.whatsapp.com/ExbqYAxKIdyBVAdH5tdkA0" target="_blank" class="btn-publicite">👉 Rejoindre le Forum</a>
+        </div>
+    </div>
 
 </body>
 </html>
