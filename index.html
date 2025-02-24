@@ -28,17 +28,18 @@
             max-width: 400px;
         }
         .app-image {
-            max-width: 30%;
+            max-width: 10%;
             height: auto;
-            margin-top: 20%;
+            margin-top: 1%;
         }
         .navbar {
             padding: 10px;
         }
-        /* Styles pour la bannière publicitaire */
+        /* Styles pour les bannières publicitaires */
         .publicite-container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             margin-top: 30px;
             margin-bottom: 20px;
         }
@@ -52,6 +53,7 @@
             border: 3px solid #ff8800;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             animation: clignotement 1.5s infinite alternate;
+            margin-bottom: 20px;
         }
         .publicite p {
             font-size: 16px;
@@ -92,20 +94,35 @@
     <header class="container mt-4">
         <h1>Découvrez MonApp</h1>
         <p>NETFLIX MOD: l'option premium désactivée.</p> <br>
-        <img src="netflix.jpg" class="app-image img-fluid" alt="Capture d'écran de l'application">
+        <img src="C:\xamppdb\htdocs\appstore\netflix.jpg" class="app-image img-fluid" alt="Capture d'écran de l'application">
         <br>
         <!-- Bouton vers la page de téléchargement -->
         <a href="download.html" class="btn btn-success btn-lg btn-download">Télécharger l'Application</a>
     </header>
 
+    <!-- Image publicitaire vers WhatsApp -->
+    <div class="mt-5">
+        <a href="https://chat.whatsapp.com/HsJcpTAYS1kLj4amkVL53t" target="_blank">
+            <img src="publicite1.jpg" alt="Rejoignez notre groupe WhatsApp" style="width:100%; max-width:300px;">
+        </a>
+    </div>
 
-    <!-- Bannière publicitaire en bas de page -->
+    <!-- Bannières publicitaires en bas de page -->
     <div class="publicite-container">
+        <!-- Bannière pour les produits et services -->
         <div class="publicite">
-            <p>🔔 Vous avez des produits en stock et cherchez plus de visibilité ?  
+            <p>🔔 Vous avez des produits à écouler ou cherchez plus de visibilité ?  
             Vous proposez des services ou avez des offres à partager ?  
             📢 Rejoignez notre groupe WhatsApp et boostez votre activité dès maintenant !</p>
             <a href="https://chat.whatsapp.com/HsJcpTAYS1kLj4amkVL53t" target="_blank" class="btn-publicite">👉 Rejoindre le Groupe</a>
+        </div>
+
+        <!-- Bannière pour les offres d'emploi -->
+        <div class="publicite">
+            <p>👔 Vous recherchez un emploi ou avez des opportunités à partager ?  
+            🚀 Ne manquez plus aucune offre et agrandissez votre réseau professionnel !  
+            📢 Rejoignez notre groupe WhatsApp dédié aux offres d'emploi dès maintenant.</p>
+            <a href="https://chat.whatsapp.com/EDEdQVzwbm9GtRIWV9HupW" target="_blank" class="btn-publicite">👉 Rejoindre le Groupe Emploi</a>
         </div>
     </div>
 
@@ -115,4 +132,4 @@
     </footer>
 
 </body>
-    </html>
+                </html>
