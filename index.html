@@ -28,12 +28,54 @@
             max-width: 400px;
         }
         .app-image {
-            max-width: 50%;
+            max-width: 10%;
             height: auto;
-            margin-top: 30%;
+            margin-top: 1%;
         }
         .navbar {
             padding: 10px;
+        }
+        /* Styles pour la bannière publicitaire */
+        .publicite-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .publicite {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+            border: 3px solid #ff8800;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            animation: clignotement 1.5s infinite alternate;
+        }
+        .publicite p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .btn-publicite {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .btn-publicite:hover {
+            transform: scale(1.1);
+            background-color: #1ebd57;
+        }
+        @keyframes clignotement {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
         }
     </style>
 </head>
@@ -49,12 +91,34 @@
     <!-- Section principale -->
     <header class="container mt-4">
         <h1>Découvrez MonApp</h1>
-        <p>NETFLIX MOD: l'option premuim desactiver.</p> <br>
-        <img src="netflix.jpg" class="app-image img-fluid" alt="Capture d'écran de l'application">
+        <p>NETFLIX MOD: l'option premium désactivée.</p> <br>
+        <img src="C:\xamppdb\htdocs\appstore\netflix.jpg" class="app-image img-fluid" alt="Capture d'écran de l'application">
         <br>
         <!-- Bouton vers la page de téléchargement -->
         <a href="download.html" class="btn btn-success btn-lg btn-download">Télécharger l'Application</a>
     </header>
 
+    <!-- Image publicitaire vers WhatsApp -->
+    <div class="mt-5">
+        <a href="https://chat.whatsapp.com/HsJcpTAYS1kLj4amkVL53t" target="_blank">
+            <img src="publicite1.jpg" alt="Rejoignez notre groupe WhatsApp" style="width:100%; max-width:300px;">
+        </a>
+    </div>
+
+    <!-- Bannière publicitaire en bas de page -->
+    <div class="publicite-container">
+        <div class="publicite">
+            <p>🔔 Vous avez des produits en stock et cherchez plus de visibilité ?  
+            Vous proposez des services ou avez des offres à partager ?  
+            📢 Rejoignez notre groupe WhatsApp et boostez votre activité dès maintenant !</p>
+            <a href="https://chat.whatsapp.com/HsJcpTAYS1kLj4amkVL53t" target="_blank" class="btn-publicite">👉 Rejoindre le Groupe</a>
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <h1><p>&copy;2024 Leroy Perez. Tous droits réservés</p></h1>
+    </footer>
+
 </body>
-</html>
+    </html>
